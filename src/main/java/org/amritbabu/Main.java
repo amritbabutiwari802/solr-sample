@@ -28,8 +28,26 @@ public class Main {
 
 
 
+
     public static void main(String[] args) throws SolrServerException, IOException {
+        //add data to collection
+         /*
+    schema
+    first_name:String,
+    last_name:String,
+    genere:List<String>,
+    langugae:List<String>
+     */
+        //uncomment for populating data
+//        try {
+//            addDataToSolr();
+//        } catch (SolrServerException e) {
+//            throw new RuntimeException(e);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
         System.out.println("program started");
+        System.out.println("\n\n, genere:War");
         executeSolrQuery("genere:War");
         System.out.println("\n\n, genere:horrror");
         executeSolrQuery("genere:horror");
@@ -71,6 +89,9 @@ public class Main {
         List<Model> results = response.getBeans(Model.class);
         results.forEach( result -> System.out.println(result.toString()));
     }
+
+
+
 
     public static void addDataToSolr() throws SolrServerException, IOException {
         AddDataToSolr addDataToSolr = new AddDataToSolr();
