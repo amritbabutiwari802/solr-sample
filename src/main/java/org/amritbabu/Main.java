@@ -39,13 +39,9 @@ public class Main {
     langugae:List<String>
      */
         //uncomment for populating data
-//        try {
+//
 //            addDataToSolr();
-//        } catch (SolrServerException e) {
-//            throw new RuntimeException(e);
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
+
         System.out.println("program started");
         System.out.println("\n\n, genere:War");
         executeSolrQuery("genere:War");
